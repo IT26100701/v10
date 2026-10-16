@@ -1,0 +1,210 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#090909">
+  <meta name="color-scheme" content="dark">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Opening workspace — TRAVA.</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@1,700;1,800&amp;display=swap" rel="stylesheet">
+  <style>
+    :root {
+      color-scheme: dark;
+      --bg: #1b1b1b;
+      --sidebar: #202020;
+      --panel: #2a2a2a;
+      --line: #4a4a4a;
+      --text: #f3f3f3;
+      --muted: #b7b7b7;
+      --quiet: #a9a9a9;
+      --accent: #f3f3f3;
+    }
+
+    * { box-sizing: border-box; }
+    body {
+      min-height: 100vh;
+      min-height: 100dvh;
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font: 15px/1.5 "DM Sans", system-ui, sans-serif;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: inherit; }
+    a:focus-visible { outline: 3px solid var(--accent); outline-offset: 4px; }
+    svg { display: block; }
+    .skip {
+      position: fixed;
+      top: -80px;
+      left: 20px;
+      z-index: 2;
+      padding: 10px 14px;
+      border-radius: 8px;
+      background: var(--accent);
+      color: #242424;
+    }
+    .skip:focus { top: 12px; }
+    .layout { display: grid; grid-template-columns: 212px minmax(0, 1fr); min-height: 100vh; min-height: 100dvh; }
+    .sidebar {
+      display: flex;
+      flex-direction: column;
+      padding: 30px 18px 22px;
+      border-right: 1px solid #3b3b3b;
+      background: var(--sidebar);
+    }
+    .brand { display: flex; align-items: center; gap: 11px; margin: 0 0 48px; text-decoration: none; font-size: 14px; font-weight: 600; letter-spacing: -.5px; white-space: nowrap; }
+    .nav-label { margin: 0 14px 10px; color: var(--quiet); font-size: 12px; }
+    .nav-link { display: flex; align-items: center; gap: 13px; min-height: 46px; padding: 11px 14px; border-radius: 9px; background: #393939; color: var(--accent); font-size: 14px; text-decoration: none; }
+    .nav-link svg { width: 19px; height: 19px; }
+    .sidebar-foot { margin-top: auto; padding: 21px 10px 0; border-top: 1px solid #404040; color: var(--quiet); font-size: 12px; }
+    .sidebar-foot strong { display: block; color: var(--text); font-size: 13px; font-weight: 500; }
+    main { --content-gutter: 34px; width: 100%; min-width: 0; padding: 0 var(--content-gutter) 34px; }
+    .topbar { display: flex; align-items: center; justify-content: space-between; gap: 16px; height: 80px; margin-inline: calc(0px - var(--content-gutter)); padding-inline: var(--content-gutter); border-bottom: 1px solid #3c3c3c; }
+    .breadcrumb { display: flex; align-items: center; gap: 11px; color: var(--muted); font-size: 13px; }
+    .breadcrumb span:last-child { color: var(--text); }
+    .breadcrumb-brand { color: var(--text); font-weight: 700; letter-spacing: .01em; }
+    .status-badge { display: inline-flex; align-items: center; gap: 7px; padding: 4px 9px; border: 1px solid #4e4e4e; border-radius: 6px; color: var(--muted); font-size: 12px; white-space: nowrap; }
+    .status-badge::before { content: ""; width: 5px; height: 5px; border-radius: 50%; background: var(--accent); }
+    .content { display: grid; place-items: center; min-height: min(760px, calc(100dvh - 114px)); padding: 50px 0; }
+    .content-inner { width: min(100%, 590px); }
+    .eyebrow { margin: 0 0 15px; color: var(--accent); font-size: 12px; font-weight: 600; letter-spacing: .09em; text-transform: uppercase; }
+    h1 { margin: 0; font-size: clamp(30px, 4vw, 42px); line-height: 1.16; letter-spacing: -1.3px; font-weight: 500; }
+    .intro { max-width: 49ch; margin: 12px 0 30px; color: var(--muted); font-size: 15px; }
+    .panel { padding: 27px 28px 25px; border: 1px solid #484848; border-radius: 16px; background: linear-gradient(150deg, #2f2f2f, #282828); }
+    .panel-head { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding-bottom: 19px; border-bottom: 1px solid var(--line); }
+    .panel-head h2 { margin: 0; font-size: 18px; font-weight: 500; letter-spacing: -.35px; }
+    .step { padding: 4px 8px; border: 1px solid #6b6b6b; border-radius: 6px; color: var(--accent); font-size: 12px; white-space: nowrap; }
+    .check { display: flex; align-items: flex-start; gap: 15px; padding: 23px 0 22px; }
+    .spinner { width: 25px; height: 25px; flex: none; margin-top: 1px; border: 2px solid #5f5f5f; border-top-color: var(--accent); border-radius: 50%; animation: spin .8s linear infinite; }
+    .check strong { display: block; font-size: 15px; font-weight: 500; }
+    .check p { margin: 4px 0 0; color: var(--muted); font-size: 13px; }
+    .progress { height: 5px; overflow: hidden; border-radius: 5px; background: #494949; }
+    .progress::before { content: ""; display: block; width: 38%; height: 100%; border-radius: inherit; background: var(--accent); animation: progress 1.5s ease-in-out infinite alternate; }
+    .actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 22px; }
+    .button { display: inline-flex; align-items: center; justify-content: center; gap: 8px; min-height: 42px; padding: 9px 14px; border: 1px solid #555555; border-radius: 8px; background: #383838; color: var(--text); font-size: 13px; font-weight: 500; text-decoration: none; transition: background .2s; }
+    .button:hover { background: #464646; }
+    .button.primary { border-color: var(--accent); background: var(--accent); color: #242424; }
+    .button.primary:hover { background: #f7f7f7; }
+    .button svg { width: 16px; height: 16px; fill: none; stroke: currentColor; stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; }
+    .footnote { margin: 15px 0 0; color: var(--quiet); font-size: 12px; }
+    @keyframes spin { to { transform: rotate(360deg); } }
+    @keyframes progress { from { transform: translateX(-15%); } to { transform: translateX(190%); } }
+    @media (max-width: 900px) {
+      .layout { display: block; }
+      .sidebar { flex-direction: row; align-items: center; justify-content: space-between; padding: 16px 24px; border-right: 0; border-bottom: 1px solid #424242; }
+      .brand { margin: 0; }
+      .nav-label, .nav-link, .sidebar-foot { display: none; }
+      main { --content-gutter: 24px; }
+      .content { min-height: calc(100dvh - 143px); }
+    }
+    @media (max-width: 600px) {
+      .sidebar { padding: 15px 18px; }
+      main { --content-gutter: 18px; padding-bottom: 30px; }
+      .topbar { height: 62px; }
+      .content { min-height: calc(100dvh - 124px); padding: 40px 0; }
+      .intro { font-size: 14px; }
+      .panel { padding: 22px 20px; }
+      .actions .button { flex: 1 1 150px; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .spinner, .progress::before { animation: none; }
+      .button { transition: none; }
+    }
+  
+    /* Text-only TRAVA. wordmark */
+    .brand {
+      font-family: "Barlow Condensed", Impact, "Arial Narrow", sans-serif;
+      font-size: 32px;
+      font-style: italic;
+      font-weight: 800;
+      letter-spacing: .055em;
+      line-height: 1;
+      text-transform: uppercase;
+    }
+
+    /* Match the dashboard card rhythm */
+    .panel { box-shadow: 0 10px 26px rgba(0, 0, 0, .10); }
+    .button { min-height: 44px; }
+</style>
+  <link rel="stylesheet" href="trava-motion.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to main content</a>
+  <div class="layout">
+    <aside class="sidebar">
+      <a class="brand" href="/login" aria-label="TRAVA. sign in">TRAVA.</a>
+      <nav aria-label="Workspace"><p class="nav-label">Workspace</p><span class="nav-link" aria-current="page"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12h5l3-7 4 14 3-7h3"/></svg>Opening</span></nav>
+      <div class="sidebar-foot"><strong>TRAVA.</strong>Checking your session</div>
+    </aside>
+
+    <main id="main" tabindex="-1">
+      <header class="topbar">
+        <div class="breadcrumb" aria-label="Breadcrumb"><span class="breadcrumb-brand">TRAVA.</span><span aria-hidden="true">/</span><span>Opening</span></div>
+        <span class="status-badge">Session check</span>
+      </header>
+      <div class="content">
+        <div class="content-inner">
+          <p class="eyebrow">TRAVA. · Workspace access</p>
+          <h1>Opening your workspace</h1>
+          <p class="intro">We’re checking your session and sending you to the right page.</p>
+
+          <section class="panel" aria-labelledby="session-title">
+            <div class="panel-head"><h2 id="session-title">Session status</h2><span class="step">In progress</span></div>
+            <div class="check" role="status" aria-live="polite">
+              <span class="spinner" aria-hidden="true"></span>
+              <div><strong id="status-title">Checking your sign in</strong><p id="status-detail">This should only take a moment.</p></div>
+            </div>
+            <div class="progress" aria-hidden="true"></div>
+            <div class="actions">
+              <a href="/login" class="button primary">Go to login <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a>
+              <a href="https://t.me/KASHMIRI_Bug_TelexWa_bot" target="_blank" rel="noopener noreferrer" class="button">Open bot <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5h11v11M19 5 7 17M17 19H5V7"/></svg></a>
+            </div>
+          </section>
+          <p class="footnote">If the page does not continue, use one of the links above.</p>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script>
+    (async function () {
+      const statusTitle = document.getElementById('status-title');
+      const statusDetail = document.getElementById('status-detail');
+      const token = localStorage.getItem('token');
+
+      if (!token) {
+        statusTitle.textContent = 'Sending you to login';
+        statusDetail.textContent = 'Sign in to open your workspace.';
+        setTimeout(() => { window.location.href = '/login'; }, 700);
+        return;
+      }
+
+      try {
+        const res = await fetch('/api/auth/me', {
+          headers: { Authorization: 'Bearer ' + token }
+        });
+
+        if (res.ok) {
+          statusTitle.textContent = 'Session confirmed';
+          statusDetail.textContent = 'Opening your dashboard now.';
+          window.location.href = '/dashboard';
+        } else {
+          localStorage.removeItem('token');
+          localStorage.removeItem('user');
+          statusTitle.textContent = 'Sending you to login';
+          statusDetail.textContent = 'Your session has ended. Please sign in again.';
+          setTimeout(() => { window.location.href = '/login'; }, 400);
+        }
+      } catch (e) {
+        statusTitle.textContent = 'Sending you to login';
+        statusDetail.textContent = 'We could not check your session. Please sign in again.';
+        setTimeout(() => { window.location.href = '/login'; }, 700);
+      }
+    })();
+  </script>
+</body>
+</html>

@@ -1,0 +1,754 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#090909">
+    <meta name="robots" content="noindex, nofollow">
+    <title>Dashboard — TRAVA.</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="trava-motion.css">
+    <style>
+        /* Additional styles for the new Attack tabs */
+        .attack-tabs {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+        .attack-tabs .btn {
+            flex: 1;
+            text-align: center;
+        }
+        .attack-tabs .btn.active {
+            background: var(--primary, #00ff88);
+            color: #000;
+            border-color: var(--primary, #00ff88);
+        }
+        .attack-section {
+            transition: opacity 0.3s ease;
+        }
+
+        /* New Attack Row Styling */
+        .attack-row {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+            margin-bottom: 12px;
+            padding: 12px;
+            border: 1px solid #333;
+            border-radius: 10px;
+            background: #1a1a1a;
+            flex-wrap: wrap;
+        }
+        .attack-row select, .attack-row input {
+            padding: 10px;
+            background: #0f0f0f;
+            border: 1px solid #444;
+            color: white;
+            border-radius: 6px;
+            flex: 1;
+            min-width: 150px;
+        }
+        .attack-row select:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+        .attack-row .row-btn {
+            padding: 10px 15px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: bold;
+            white-space: nowrap;
+            min-width: 100px;
+        }
+        .attack-row .start-btn {
+            background: #00ff88;
+            color: #000;
+        }
+        .attack-row .stop-btn {
+            background: #ff3333;
+            color: #fff;
+        }
+        .attack-row .status-text {
+            font-size: 12px;
+            color: #888;
+            min-width: 100px;
+            text-align: right;
+        }
+        .row-remove-btn {
+            background: transparent;
+            border: 1px solid #555;
+            color: #ff4444;
+            padding: 8px 12px;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+        .row-remove-btn:hover {
+            background: #331111;
+        }
+    </style>
+</head>
+<body class="app-body" data-page="dashboard">
+    <a class="skip-link" href="#main">Skip to main content</a>
+    <svg class="icon-library" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+        <symbol id="i-grid" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="2"/><rect x="14" y="3" width="7" height="7" rx="2"/><rect x="3" y="14" width="7" height="7" rx="2"/><rect x="14" y="14" width="7" height="7" rx="2"/></symbol>
+        <symbol id="i-bolt" viewBox="0 0 24 24"><path d="m13 2-9 12h7l-1 8 10-13h-7l1-7Z"/></symbol>
+        <symbol id="i-phone" viewBox="0 0 24 24"><rect x="6" y="2.5" width="12" height="19" rx="3"/><path d="M10 18h4"/></symbol>
+        <symbol id="i-spark" viewBox="0 0 24 24"><path d="m12 2 2.1 7.9L22 12l-7.9 2.1L12 22l-2.1-7.9L2 12l7.9-2.1L12 2Z"/></symbol>
+        <symbol id="i-link" viewBox="0 0 24 24"><path d="M10 14a5 5 0 0 0 7.1 0l3-3a5 5 0 0 0-7.1-7.1l-1.7 1.7M14 10a5 5 0 0 0-7.1 0l-3 3A5 5 0 0 0 11 20.1l1.7-1.7"/></symbol>
+        <symbol id="i-users" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3"/><path d="M3 20v-2a6 6 0 0 1 12 0v2H3ZM17 5a3 3 0 0 1 0 6m1 4a5 5 0 0 1 3 5"/></symbol>
+        <symbol id="i-list" viewBox="0 0 24 24"><path d="M8 5h13M8 12h13M8 19h13M3 5h.01M3 12h.01M3 19h.01"/></symbol>
+        <symbol id="i-send" viewBox="0 0 24 24"><path d="m22 2-7 20-4-9-9-4 20-7ZM11 13 22 2"/></symbol>
+        <symbol id="i-log-out" viewBox="0 0 24 24"><path d="M10 4H5a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h5M14 8l4 4-4 4M8 12h10"/></symbol>
+    </svg>
+
+    <aside class="sidebar" id="sidebar">
+        <div class="sidebar-head">
+            <div class="logo-wrap"><span class="logo-name">TRAVA CRASHER V10</span></div>
+            <button class="sidebar-close" type="button" onclick="toggleSidebar()" aria-label="Close navigation">✕</button>
+        </div>
+
+        <div class="user-card">
+            <div class="user-avatar" id="sidebarAvatar">T</div>
+            <div class="user-info">
+                <span class="user-name" id="sidebarUsername">Loading...</span>
+                <span class="user-tier" id="sidebarTier">—</span>
+            </div>
+        </div>
+
+        <nav class="sidebar-nav">
+            <div class="nav-group">
+                <span class="nav-label">Main</span>
+                <a href="#" class="nav-item active" data-page="dashboard" aria-current="page">
+                    <svg class="nav-icon" aria-hidden="true"><use href="#i-grid"/></svg>
+                    <span class="nav-text">Dashboard</span>
+                </a>
+                <a href="#" class="nav-item" data-page="attack">
+                    <svg class="nav-icon" aria-hidden="true"><use href="#i-bolt"/></svg>
+                    <span class="nav-text">Attack</span>
+                </a>
+            </div>
+
+            <div class="nav-group">
+                <span class="nav-label">Account</span>
+                <a href="#" class="nav-item" data-page="pairing">
+                    <svg class="nav-icon" aria-hidden="true"><use href="#i-phone"/></svg>
+                    <span class="nav-text">My Pairings</span>
+                    <span class="nav-badge" id="badgePairings">0</span>
+                </a>
+                <a href="#" class="nav-item" data-page="premium">
+                    <svg class="nav-icon" aria-hidden="true"><use href="#i-spark"/></svg>
+                    <span class="nav-text">Premium</span>
+                </a>
+            </div>
+
+            <div class="nav-group" id="adminGroup" style="display:none;">
+                <span class="nav-label">Admin</span>
+                <a href="#" class="nav-item" data-page="admin-sessions">
+                    <svg class="nav-icon" aria-hidden="true"><use href="#i-link"/></svg>
+                    <span class="nav-text">All Sessions</span>
+                    <span class="nav-badge" id="badgeBotSessions">0</span>
+                </a>
+                <a href="#" class="nav-item" data-page="admin-users">
+                    <svg class="nav-icon" aria-hidden="true"><use href="#i-users"/></svg>
+                    <span class="nav-text">Users</span>
+                    <span class="nav-badge" id="badgeUsers">0</span>
+                </a>
+                <a href="#" class="nav-item" data-page="admin-logs">
+                    <svg class="nav-icon" aria-hidden="true"><use href="#i-list"/></svg>
+                    <span class="nav-text">Logs</span>
+                </a>
+            </div>
+        </nav>
+
+        <div class="sidebar-foot">
+            <div class="social-links">
+                <a href="https://t.me/blacktravazappers" target="_blank" rel="noopener noreferrer" aria-label="Telegram channel" title="Channel"><svg aria-hidden="true"><use href="#i-send"/></svg></a>
+                <a href="https://t.me/smartsquardteam" target="_blank" rel="noopener noreferrer" aria-label="Telegram group" title="Group"><svg aria-hidden="true"><use href="#i-users"/></svg></a>
+                <a href="https://t.me/smartsquardyt" target="_blank" rel="noopener noreferrer" aria-label="Telegram owner" title="Owner"><svg aria-hidden="true"><use href="#i-spark"/></svg></a>
+            </div>
+            <button class="logout-btn" onclick="logout()">
+                <svg class="logout-icon" aria-hidden="true"><use href="#i-log-out"/></svg>
+                <span>Logout</span>
+            </button>
+        </div>
+    </aside>
+
+    <button class="sidebar-backdrop" id="sidebarBackdrop" type="button" aria-label="Close navigation" aria-hidden="true" onclick="toggleSidebar(false)"></button>
+
+    <main class="main" id="main" tabindex="-1">
+        <header class="header">
+            <button class="hamburger" type="button" onclick="toggleSidebar()" aria-label="Open navigation" aria-controls="sidebar" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
+            <div class="header-titles">
+                <h1 class="header-title" id="pageTitle">Dashboard</h1>
+                <p class="header-sub" id="pageSubtitle">Welcome back</p>
+            </div>
+        </header>
+
+        <section class="page active" id="view-dashboard">
+            <div class="home-board" aria-label="Dashboard cards">
+              <div class="home-board-top" data-board-group="top">
+                <section class="home-hero board-card board-card--welcome" data-card-id="welcome" data-card-label="Welcome" aria-labelledby="home-title">
+                    <div class="home-hero-copy">
+                        <p class="home-eyebrow">HOME</p>
+                        <h2 id="home-title">Welcome home,<br><span id="homeGreeting">friend</span>.</h2>
+                    </div>
+                    <div class="home-hero-bottom"><span>YOUR PLAN</span><strong id="homePlan">Free</strong></div>
+                </section>
+                <section class="clock-card board-card board-card--clock" data-card-id="clock" data-card-label="Clock" aria-labelledby="clock-title">
+                    <div class="clock-card-top"><span>YOUR TIME</span><h2 id="clock-title">Clock</h2></div>
+                    <div class="clock-face" aria-hidden="true">
+                        <span class="clock-number clock-number--12">12</span>
+                        <span class="clock-number clock-number--3">3</span>
+                        <span class="clock-number clock-number--6">6</span>
+                        <span class="clock-number clock-number--9">9</span>
+                        <span class="clock-hand clock-hand--hour"></span>
+                        <span class="clock-hand clock-hand--minute"></span>
+                        <span class="clock-pin"></span>
+                    </div>
+                    <div class="clock-footer">
+                        <div class="clock-readout"><time id="clockDigital">--:--</time><span id="clockMode">Live local time</span></div>
+                        <div class="clock-country"><span>COUNTRY</span><strong id="clockCountry">Detecting…</strong></div>
+                        <div class="clock-controls"><label for="clockTimeInput">Set time</label><input id="clockTimeInput" type="time" step="60"><button id="clockNow" type="button">Now</button></div>
+                    </div>
+                </section>
+                <section class="card card--feature board-card board-card--quick" data-card-id="quick" data-card-label="Quick kiss" aria-labelledby="quick-title">
+                    <div class="card-head">
+                        <div>
+                            <p class="card-kicker">Quick action</p>
+                            <h2 class="card-title" id="quick-title">Quick Attack</h2>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="form-grid">
+                            <div class="form-field">
+                                <label for="quickAttackType">Attack type</label>
+                                <select id="quickAttackType" class="input"></select>
+                            </div>
+                            <div class="form-field">
+                                <label for="quickTarget">WhatsApp number</label>
+                                <input type="tel" id="quickTarget" class="input" placeholder="923001234567" inputmode="numeric" autocomplete="off" aria-describedby="quickTargetHint">
+                                <span class="field-hint" id="quickTargetHint">Include the country code.</span>
+                            </div>
+                            <div class="form-field small">
+                                <label for="quickCount">Send count</label>
+                                <input type="number" id="quickCount" class="input" value="1" min="1" max="100">
+                            </div>
+                            <div class="form-field small action-field">
+                                <button class="btn btn-primary full" type="button" onclick="quickAttack(event)">Send quick Attack</button>
+                            </div>
+                        </div>
+                        <div class="result" id="quickResult" role="status" aria-live="polite"></div>
+                    </div>
+                </section>
+              </div>
+              <div class="home-board-stats" data-board-group="stats" role="group" aria-label="Workspace summary">
+                <div class="stat board-card board-card--stat" data-card-id="sessions" data-card-label="My sessions">
+                    <div class="stat-top">
+                        <span class="stat-label">My sessions</span>
+                    </div>
+                    <div class="stat-value" id="statUserSessions">0</div>
+                    <p class="stat-note">Paired to your account</p>
+                </div>
+                <div class="stat board-card board-card--stat" data-card-id="attacks" data-card-label="My attacks">
+                    <div class="stat-top">
+                        <span class="stat-label">My attacks</span>
+                    </div>
+                    <div class="stat-value" id="statTotalAttacks">0</div>
+                    <p class="stat-note">Runs from this account</p>
+                </div>
+                <div class="stat board-card board-card--stat" data-card-id="bots" data-card-label="Bot sessions">
+                    <div class="stat-top">
+                        <span class="stat-label">Bot sessions</span>
+                    </div>
+                    <div class="stat-value" id="statBotSessions">0</div>
+                    <p class="stat-note">Bot-wide total</p>
+                </div>
+                <div class="stat board-card board-card--stat" data-card-id="plan" data-card-label="Plan">
+                    <div class="stat-top">
+                        <span class="stat-label">Plan</span>
+                    </div>
+                    <div class="stat-value" id="statExpiry">—</div>
+                    <p class="stat-note">Expires <span id="infoExpiry">—</span></p>
+                </div>
+              </div>
+            </div>
+            <p class="board-order-status" id="boardOrderStatus" role="status" aria-live="polite"></p>
+        </section>
+
+        <section class="page" id="view-attack">
+            <div class="attack-tabs">
+                <button class="btn btn-primary active" id="tabStandard" onclick="switchAttackTab('standard')">Standard Attack</button>
+                <button class="btn btn-ghost" id="tabPermanent" onclick="switchAttackTab('permanent')">💣 Bug Permanent</button>
+            </div>
+
+            <div id="standard-attacks" class="attack-section active">
+                <section class="card" aria-labelledby="full-title">
+                    <div class="card-head">
+                        <div>
+                            <p class="card-kicker">Attack mode</p>
+                            <h2 class="card-title" id="full-title">Full Attack</h2>
+                            <p class="card-sub">Set the type, recipient, and loops before sending.</p>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <fieldset class="command-picker" id="attackTypePicker">
+                            <legend>Attack type</legend>
+                            <p class="field-hint">Choose a card to set the Attack type.</p>
+                            <div class="command-grid" id="attackTypeCards" tabindex="-1"></div>
+                        </fieldset>
+                        <div class="form-grid doom-details">
+                            <div class="form-field">
+                                <label for="attackTarget">WhatsApp number</label>
+                                <input type="tel" id="attackTarget" class="input" placeholder="923001234567" inputmode="numeric" autocomplete="off" aria-describedby="attackTargetHint">
+                                <span class="field-hint" id="attackTargetHint">Include the country code.</span>
+                            </div>
+                            <div class="form-field small">
+                                <label for="attackCount">Loops</label>
+                                <input type="number" id="attackCount" class="input" value="1" min="1" max="100">
+                            </div>
+                        </div>
+                        <button class="btn btn-primary btn-lg" type="button" onclick="sendAttack(event)">Send full kiss</button>
+                        <div class="result" id="attackResult" role="status" aria-live="polite"></div>
+                    </div>
+                </section>
+            </div>
+
+            <div id="permanent-attacks" class="attack-section" style="display: none;">
+                <section class="card">
+                    <div class="card-head">
+                        <div>
+                            <p class="card-kicker">Attack mode</p>
+                            <h2 class="card-title">💣 Bug Permanent</h2>
+                            <p class="card-sub">Add multiple attack configurations below. Each runs independently until stopped.</p>
+                        </div>
+                        <button class="btn btn-primary" onclick="addAttackRow()">➕ Add Number</button>
+                    </div>
+                    <div class="card-body">
+                        <div id="permanent-attack-rows">
+                            <!-- Dynamic rows will be added here -->
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </section>
+
+        <section class="page" id="view-pairing">
+            <section class="card" aria-labelledby="pairings-title">
+                <div class="card-head">
+                    <div>
+                        <p class="card-kicker">Connections</p>
+                        <h2 class="card-title" id="pairings-title">My pairings</h2>
+                        <p class="card-sub">Connect a WhatsApp number to use the free tier.</p>
+                    </div>
+                    <button class="btn btn-ghost" type="button" onclick="loadPairings()">Refresh pairings</button>
+                </div>
+                <div class="card-body">
+                    <div class="pair-form">
+                        <div class="form-field"><label for="pairNumber">WhatsApp number</label><input type="tel" id="pairNumber" class="input" placeholder="923001234567" inputmode="numeric" autocomplete="off"></div>
+                        <button class="btn btn-primary" type="button" onclick="requestPair(event)">Request pair code</button>
+                    </div>
+                    <div class="pair-code" id="pairCodeDisplay" role="status" aria-live="polite"></div>
+                    <div class="list" id="pairingList"></div>
+                </div>
+            </section>
+        </section>
+
+        <section class="page" id="view-premium">
+            <section class="pricing-section" aria-labelledby="premium-title">
+                <div class="pricing-heading">
+                    <p class="pricing-kicker">Plans</p>
+                    <h2 id="premium-title">Premium</h2>
+                    <p>See what changes when you upgrade.</p>
+                </div>
+                <ul class="pricing-grid" role="list">
+                    <li>
+                        <article class="price-card price-card--free" aria-labelledby="plan-free-title">
+                            <div class="price-card-top"><span class="price-card-tag">01 / 03</span></div>
+                            <h3 id="plan-free-title">Free Tier</h3>
+                            <p class="price-card-description">Pair WhatsApp · Limited</p>
+                            <div class="price-block"><span class="price-value">Limited</span><span class="price-period">Pair WhatsApp</span></div>
+                            <button class="price-action price-action--quiet" type="button" onclick="navigateTo('pairing')">Pair WhatsApp <span aria-hidden="true">↗</span></button>
+                        </article>
+                    </li>
+                    <li>
+                        <article class="price-card price-card--premium" aria-labelledby="plan-premium-title">
+                            <div class="price-card-top"><span class="price-card-tag">02 / 03</span></div>
+                            <h3 id="plan-premium-title">Upgrade to Premium</h3>
+                            <p class="price-card-description">Get unlimited attacks with bot's sessions. No pairing required.</p>
+                            <div class="price-block"><span class="price-value">Unlimited</span><span class="price-period">Bot sessions</span></div>
+                            <a class="price-action price-action--primary" href="https://t.me/smartsquardyt" target="_blank" rel="noopener noreferrer">Contact <span aria-hidden="true">↗</span></a>
+                        </article>
+                    </li>
+                    <li>
+                        <article class="price-card price-card--contact" aria-labelledby="plan-contact-title">
+                            <div class="price-card-top"><span class="price-card-tag">03 / 03</span></div>
+                            <h3 id="plan-contact-title">Contact</h3>
+                            <div class="price-contact-lines">
+                                <div><a href="https://t.me/smartsquardyt" target="_blank" rel="noopener noreferrer">@smartsquardyt</a></div>
+                                <div><span>Channel</span><a href="https://t.me/blacktravazappers" target="_blank" rel="noopener noreferrer">@blacktravazappers</a></div>
+                            </div>
+                        </article>
+                    </li>
+                </ul>
+            </section>
+        </section>
+
+        <section class="page" id="view-admin-sessions">
+            <section class="card" aria-labelledby="sessions-title">
+                <div class="card-head">
+                    <div>
+                        <p class="card-kicker">Admin</p>
+                        <h2 class="card-title" id="sessions-title">All sessions</h2>
+                        <p class="card-sub">Manage paired WhatsApp numbers.</p>
+                    </div>
+                    <button class="btn btn-ghost" type="button" onclick="loadAdminSessions()">Refresh sessions</button>
+                </div>
+                <div class="card-body">
+                    <div class="session-stats" id="sessionStats"></div>
+                    <div class="list" id="adminSessionsList"></div>
+                </div>
+            </section>
+        </section>
+
+        <section class="page" id="view-admin-users">
+            <section class="card" aria-labelledby="users-title">
+                <div class="card-head">
+                    <div>
+                        <p class="card-kicker">Admin</p>
+                        <h2 class="card-title" id="users-title">Users</h2>
+                        <p class="card-sub">Manage user accounts and access.</p>
+                    </div>
+                    <button class="btn btn-ghost" type="button" onclick="loadAdminUsers()">Refresh users</button>
+                </div>
+                <div class="card-body">
+                    <div class="list" id="adminUsersList"></div>
+                </div>
+            </section>
+        </section>
+
+        <section class="page" id="view-admin-logs">
+            <section class="card" aria-labelledby="logs-title">
+                <div class="card-head">
+                    <div>
+                        <p class="card-kicker">Admin</p>
+                        <h2 class="card-title" id="logs-title">Logs</h2>
+                        <p class="card-sub">Review recent API activity.</p>
+                    </div>
+                    <button class="btn btn-ghost" type="button" onclick="loadLogs()">Refresh logs</button>
+                </div>
+                <div class="card-body">
+                    <div class="logs" id="logsList"></div>
+                </div>
+            </section>
+        </section>
+    </main>
+
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+    <script src="app.js"></script>
+    
+    <!-- ==================== PERMANENT ATTACK SCRIPT (MULTI-ROW) ==================== -->
+    <script>
+        let rowCounter = 0;
+        let availableBugs = [];
+        let rowAttacks = {}; // Stores { rowId: attackId }
+
+        // 1. Handle tab switching
+        function switchAttackTab(tab) {
+            const standardTab = document.getElementById('tabStandard');
+            const permanentTab = document.getElementById('tabPermanent');
+            const standardSection = document.getElementById('standard-attacks');
+            const permanentSection = document.getElementById('permanent-attacks');
+
+            if (tab === 'standard') {
+                standardTab.classList.add('active');
+                permanentTab.classList.remove('active');
+                standardSection.style.display = 'block';
+                permanentSection.style.display = 'none';
+            } else {
+                standardTab.classList.remove('active');
+                permanentTab.classList.add('active');
+                standardSection.style.display = 'none';
+                permanentSection.style.display = 'block';
+                
+                loadBugs().then(() => {
+                    loadAllRowsSessions();
+                });
+            }
+        }
+
+        // 2. Fetch available bugs from API (called once)
+        async function loadBugs() {
+            if (availableBugs.length > 0) return;
+            const token = localStorage.getItem('token');
+            try {
+                const res = await fetch('/api/commands', {
+                    headers: { 'Authorization': `Bearer ${token}` }
+                });
+                const data = await res.json();
+                availableBugs = data.commands || [];
+            } catch (err) {
+                console.error('Failed to load bugs:', err);
+            }
+        }
+
+        // 3. Add a new attack row
+        function addAttackRow() {
+            const rowId = rowCounter++;
+            const container = document.getElementById('permanent-attack-rows');
+            
+            const row = document.createElement('div');
+            row.className = 'attack-row';
+            row.id = `perm-row-${rowId}`;
+            
+            // Build bug options
+            let bugOptions = '<option value="">Select Bug</option>';
+            availableBugs.forEach(b => {
+                bugOptions += `<option value="${b.cmdName}">${b.cmdName} (${b.platform})</option>`;
+            });
+
+            row.innerHTML = `
+                <select id="session-${rowId}" class="row-session-select">
+                    <option value="">Loading sessions...</option>
+                </select>
+                <select id="bug-${rowId}" class="row-bug-select">
+                    ${bugOptions}
+                </select>
+                <input type="text" id="target-${rowId}" class="row-target-input" placeholder="923001234567">
+                <button class="row-btn start-btn" id="start-${rowId}" onclick="startRowAttack(${rowId})">▶️ Start</button>
+                <button class="row-btn stop-btn" id="stop-${rowId}" style="display:none;" onclick="stopRowAttack(${rowId})">⏹️ Stop</button>
+                <span class="status-text" id="status-${rowId}">Idle</span>
+                <button class="row-remove-btn" onclick="removeAttackRow(${rowId})">✕</button>
+            `;
+            
+            container.appendChild(row);
+            loadSessionsForRow(rowId);
+        }
+
+        // 4. Remove an attack row
+        function removeAttackRow(rowId) {
+            // If it's running, stop it first
+            if (rowAttacks[rowId]) {
+                stopRowAttack(rowId);
+            }
+            const row = document.getElementById(`perm-row-${rowId}`);
+            if (row) row.remove();
+        }
+
+        // 5. Load sessions for a specific row (with owner tag + locked status)
+        async function loadSessionsForRow(rowId) {
+            const token = localStorage.getItem('token');
+            const select = document.getElementById(`session-${rowId}`);
+            if (!select) return;
+            
+            const previousValue = select.value;
+            select.innerHTML = '<option value="">Loading...</option>';
+
+            try {
+                const res = await fetch('/api/pair/sessions', {
+                    headers: { 'Authorization': `Bearer ${token}` }
+                });
+                const data = await res.json();
+                select.innerHTML = '<option value="">Select Session</option>';
+
+                if (data.sessions && data.sessions.length > 0) {
+                    data.sessions.forEach(session => {
+                        const option = document.createElement('option');
+                        option.value = session.number;
+                        
+                        // Show owner tag if present (for admin/premium/reseller viewing global sessions)
+                        const ownerTag = session.owner ? ` [${session.owner}]` : '';
+                        
+                        if (session.isLocked) {
+                            option.textContent = `📱 +${session.number}${ownerTag} (🔒 In Use)`;
+                            option.disabled = true;
+                        } else {
+                            option.textContent = `📱 +${session.number}${ownerTag}`;
+                        }
+                        select.appendChild(option);
+                    });
+                } else {
+                    select.innerHTML = '<option value="">No sessions</option>';
+                }
+                
+                // Restore previous selection if it's still available
+                if (previousValue) select.value = previousValue;
+            } catch (err) {
+                select.innerHTML = '<option value="">Error</option>';
+            }
+        }
+
+        // 6. Refresh sessions for all rows
+        function loadAllRowsSessions() {
+            document.querySelectorAll('.row-session-select').forEach(sel => {
+                const rowId = sel.id.replace('session-', '');
+                loadSessionsForRow(rowId);
+            });
+        }
+
+        // 7. Start attack for a specific row
+        async function startRowAttack(rowId) {
+            const token = localStorage.getItem('token');
+            const sessionNumber = document.getElementById(`session-${rowId}`).value;
+            const bugType = document.getElementById(`bug-${rowId}`).value;
+            const targetNumber = document.getElementById(`target-${rowId}`).value.trim();
+
+            if (!sessionNumber) return alert('Please select a session for this row.');
+            if (!bugType) return alert('Please select a bug type for this row.');
+            if (!targetNumber) return alert('Please enter a target number for this row.');
+
+            const startBtn = document.getElementById(`start-${rowId}`);
+            const stopBtn = document.getElementById(`stop-${rowId}`);
+            const statusDiv = document.getElementById(`status-${rowId}`);
+            const sessionSelect = document.getElementById(`session-${rowId}`);
+
+            startBtn.disabled = true;
+            startBtn.textContent = '⏳';
+            statusDiv.textContent = 'Starting...';
+
+            try {
+                const res = await fetch('/api/attack/permanent/start', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Authorization': `Bearer ${token}`
+                    },
+                    body: JSON.stringify({
+                        attackType: bugType,
+                        sessionNumber: sessionNumber,
+                        targets: [targetNumber] // Backend expects array
+                    })
+                });
+                const data = await res.json();
+                
+                if (res.ok && data.attackId) {
+                    rowAttacks[rowId] = data.attackId;
+                    
+                    // Start polling to check if the attack is still alive
+                    pollAttackStatus(rowId, data.attackId);
+                    
+                    startBtn.style.display = 'none';
+                    stopBtn.style.display = 'inline-block';
+                    statusDiv.innerHTML = `<span style="color: #00ff88;">● Running</span>`;
+                    sessionSelect.disabled = true; // Lock the dropdown for this row
+                    
+                    // Refresh sessions on ALL rows so they see this one is now locked
+                    loadAllRowsSessions();
+                } else {
+                    alert(`❌ Error: ${data.error || 'Failed to start'}`);
+                    startBtn.disabled = false;
+                    startBtn.textContent = '▶️ Start';
+                    statusDiv.textContent = 'Idle';
+                }
+            } catch (err) {
+                alert('Network error.');
+                startBtn.disabled = false;
+                startBtn.textContent = '▶️ Start';
+                statusDiv.textContent = 'Idle';
+            }
+        }
+
+        // 8. Stop attack for a specific row
+        async function stopRowAttack(rowId) {
+            const token = localStorage.getItem('token');
+            const attackId = rowAttacks[rowId];
+
+            if (!attackId) return alert('No active attack for this row.');
+
+            const stopBtn = document.getElementById(`stop-${rowId}`);
+            const startBtn = document.getElementById(`start-${rowId}`);
+            const statusDiv = document.getElementById(`status-${rowId}`);
+            const sessionSelect = document.getElementById(`session-${rowId}`);
+
+            stopBtn.disabled = true;
+            stopBtn.textContent = '⏳';
+
+            try {
+                const res = await fetch('/api/attack/permanent/stop', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Authorization': `Bearer ${token}`
+                    },
+                    body: JSON.stringify({ attackId })
+                });
+                const data = await res.json();
+
+                if (res.ok) {
+                    delete rowAttacks[rowId];
+                    stopBtn.style.display = 'none';
+                    startBtn.style.display = 'inline-block';
+                    startBtn.disabled = false;
+                    startBtn.textContent = '▶️ Start';
+                    statusDiv.textContent = 'Stopped';
+                    sessionSelect.disabled = false; // Unlock dropdown
+                    
+                    // Refresh sessions on ALL rows so they see this one is now unlocked
+                    loadAllRowsSessions();
+                } else {
+                    alert(`❌ Error: ${data.error}`);
+                    stopBtn.disabled = false;
+                    stopBtn.textContent = '⏹️ Stop';
+                }
+            } catch (err) {
+                alert('Network error.');
+                stopBtn.disabled = false;
+                stopBtn.textContent = '⏹️ Stop';
+            }
+        }
+
+        // 9. Poll attack status to detect dead workers and reset UI
+        function pollAttackStatus(rowId, attackId) {
+            const token = localStorage.getItem('token');
+            const interval = setInterval(async () => {
+                try {
+                    const res = await fetch('/api/attack/permanent/status', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json',
+                            'Authorization': `Bearer ${token}`
+                        },
+                        body: JSON.stringify({ attackId })
+                    });
+                    const data = await res.json();
+                    
+                    if (!data.active) {
+                        clearInterval(interval);
+                        delete rowAttacks[rowId];
+                        
+                        const startBtn = document.getElementById(`start-${rowId}`);
+                        const stopBtn = document.getElementById(`stop-${rowId}`);
+                        const statusDiv = document.getElementById(`status-${rowId}`);
+                        const sessionSelect = document.getElementById(`session-${rowId}`);
+                        
+                        if (startBtn) {
+                            startBtn.style.display = 'inline-block';
+                            startBtn.disabled = false;
+                            startBtn.textContent = '▶️ Start';
+                        }
+                        if (stopBtn) stopBtn.style.display = 'none';
+                        if (statusDiv) statusDiv.innerHTML = '<span style="color: #ff4444;">● Died</span>';
+                        if (sessionSelect) sessionSelect.disabled = false;
+                        
+                        loadAllRowsSessions();
+                    }
+                } catch (e) {
+                    // Ignore network errors during polling
+                }
+            }, 10000); // Check every 10 seconds
+        }
+
+        // Initialize when page loads
+        window.addEventListener('DOMContentLoaded', () => {
+            loadBugs();
+        });
+    </script>
+</body>
+</html>

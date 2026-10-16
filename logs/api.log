@@ -1,0 +1,335 @@
+[2026-10-07T17:40:35.652Z] [INFO] API started {"port":"3000"}
+[2026-10-07T18:12:26.570Z] [INFO] API started {"port":"3000"}
+[2026-10-07T19:15:40.810Z] [ERROR] OTP request failed {"error":"Unauthorized","userId":"6066724720"}
+[2026-10-07T19:15:53.809Z] [ERROR] OTP request failed {"error":"Unauthorized","userId":"6066724720"}
+[2026-10-07T19:16:09.368Z] [ERROR] OTP request failed {"error":"Unauthorized","userId":"6066724720"}
+[2026-10-07T19:32:20.056Z] [INFO] API started {"port":"3000"}
+[2026-10-07T19:32:21.893Z] [ERROR] OTP request failed {"error":"Unauthorized","userId":"6066724720"}
+[2026-10-07T19:32:38.220Z] [ERROR] OTP request failed {"error":"Unauthorized","userId":"6066724720"}
+[2026-10-07T20:20:09.540Z] [INFO] API started {"port":"3000"}
+[2026-10-07T20:20:26.160Z] [INFO] OTP sent {"userId":"6066724720"}
+[2026-10-07T20:20:45.147Z] [INFO] User logged in {"userId":"6066724720","tier":"premium"}
+[2026-10-07T20:28:32.206Z] [INFO] API started {"port":"3000"}
+[2026-10-07T20:28:42.991Z] [INFO] OTP sent {"userId":"6066724720"}
+[2026-10-07T20:29:00.773Z] [INFO] User logged in {"userId":"6066724720","tier":"free"}
+[2026-10-07T20:32:04.132Z] [INFO] API started {"port":"3000"}
+[2026-10-07T20:47:53.753Z] [INFO] API started {"port":"3000"}
+[2026-10-07T20:50:52.662Z] [INFO] API started {"port":"3000"}
+[2026-10-07T20:51:21.724Z] [INFO] OTP sent {"userId":"6066724720"}
+[2026-10-07T20:51:37.462Z] [INFO] User logged in {"userId":"6066724720","tier":"free"}
+[2026-10-07T20:57:02.457Z] [INFO] API started {"port":"3000"}
+[2026-10-07T21:01:09.651Z] [INFO] API started {"port":"3000"}
+[2026-10-07T21:02:53.911Z] [INFO] API started {"port":"3000"}
+[2026-10-08T20:23:26.940Z] [INFO] API started {"port":"3000"}
+[2026-10-08T20:34:50.172Z] [ERROR] Unhandled {"error":"ENOENT: no such file or directory, stat '/home/container/public/login.html'"}
+[2026-10-08T20:42:31.033Z] [INFO] OTP sent {"userId":"6066724720"}
+[2026-10-08T20:42:44.411Z] [INFO] User logged in {"userId":"6066724720","tier":"free"}
+[2026-10-08T21:01:47.389Z] [INFO] OTP sent {"userId":"6066724720"}
+[2026-10-08T21:02:02.886Z] [INFO] User logged in {"userId":"6066724720","tier":"free"}
+[2026-10-08T21:20:42.581Z] [INFO] OTP sent {"userId":"6066724720"}
+[2026-10-08T21:21:06.497Z] [INFO] User logged in {"userId":"6066724720","tier":"free"}
+[2026-10-09T07:23:23.958Z] [INFO] OTP sent {"userId":"6066724720"}
+[2026-10-09T07:23:42.031Z] [INFO] User logged in {"userId":"6066724720","tier":"free"}
+[2026-10-09T10:59:59.387Z] [INFO] OTP sent {"userId":"6066724720"}
+[2026-10-09T11:00:20.690Z] [INFO] User logged in {"userId":"6066724720","tier":"free"}
+[2026-10-09T13:42:20.944Z] [INFO] API started {"port":"3000"}
+[2026-10-09T14:07:09.806Z] [INFO] API started {"port":"3000"}
+[2026-10-09T14:57:02.105Z] [INFO] API started {"port":"3000"}
+[2026-10-09T15:02:33.620Z] [INFO] API started {"port":"3000"}
+[2026-10-09T15:55:16.736Z] [ERROR] OTP request failed {"error":"Bad Request: chat not found","userId":"8957588737"}
+[2026-10-09T15:56:34.353Z] [ERROR] OTP request failed {"error":"Bad Request: chat not found","userId":"8957588737"}
+[2026-10-09T18:04:28.979Z] [INFO] API started {"port":"3000"}
+[2026-10-09T20:20:48.840Z] [INFO] API started {"port":"3000"}
+[2026-10-09T20:24:59.833Z] [INFO] API started {"port":"3000"}
+[2026-10-09T20:56:37.575Z] [INFO] API started {"port":"3000"}
+[2026-10-10T20:24:18.440Z] [INFO] API started {"port":"3000"}
+[2026-10-10T20:24:46.143Z] [INFO] OTP sent {"userId":"6066724720"}
+[2026-10-10T20:25:23.893Z] [ERROR] OTP request failed {"error":"Bad Request: chat not found","userId":"8957588737"}
+[2026-10-10T20:25:27.476Z] [INFO] User logged in {"userId":"6066724720","tier":"free"}
+[2026-10-10T20:26:00.626Z] [INFO] OTP sent {"userId":"8957588737"}
+[2026-10-10T20:26:11.772Z] [INFO] User logged in {"userId":"8957588737","tier":"free"}
+[2026-10-10T20:42:04.804Z] [INFO] OTP sent {"userId":"8957588737"}
+[2026-10-10T20:42:18.003Z] [INFO] User logged in {"userId":"8957588737","tier":"free"}
+[2026-10-10T20:45:25.194Z] [INFO] API started {"port":"3000"}
+[2026-10-10T20:54:47.774Z] [INFO] OTP sent {"userId":"8957588737"}
+[2026-10-10T20:54:58.233Z] [INFO] User logged in {"userId":"8957588737","tier":"free"}
+[2026-10-10T20:59:52.710Z] [INFO] OTP sent {"userId":"8957588737"}
+[2026-10-10T21:00:09.885Z] [INFO] User logged in {"userId":"8957588737","tier":"free"}
+[2026-10-10T21:03:03.438Z] [INFO] API started {"port":"3000"}
+[2026-10-10T21:07:26.287Z] [INFO] API started {"port":"3000"}
+[2026-10-10T21:08:57.144Z] [INFO] API started {"port":"3000"}
+[2026-10-10T21:12:01.204Z] [INFO] API started {"port":"3000"}
+[2026-10-10T23:04:15.270Z] [INFO] OTP sent {"userId":"6066724720"}
+[2026-10-10T23:04:29.968Z] [INFO] User logged in {"userId":"6066724720","tier":"free"}
+[2026-10-11T12:15:41.678Z] [INFO] API started {"port":"3000"}
+[2026-10-11T14:41:22.035Z] [INFO] API started {"port":"3000"}
+[2026-10-11T14:52:52.410Z] [INFO] API started {"port":"3000"}
+[2026-10-11T15:03:15.597Z] [INFO] API started {"port":"3000"}
+[2026-10-12T09:03:02.966Z] [INFO] API started {"port":"3000"}
+[2026-10-12T13:20:57.090Z] [INFO] OTP sent {"userId":"6066724720"}
+[2026-10-12T13:21:32.607Z] [INFO] User logged in {"userId":"6066724720","tier":"free"}
+[2026-10-12T13:32:49.068Z] [INFO] OTP sent {"userId":"6066724720"}
+[2026-10-13T08:25:37.895Z] [INFO] API started {"port":"3000"}
+[2026-10-13T08:40:32.228Z] [INFO] API started {"port":"3000","admins":["606724720"]}
+[2026-10-13T08:45:02.829Z] [INFO] OTP sent {"userId":"6066724720"}
+[2026-10-13T08:45:20.579Z] [INFO] User logged in {"userId":"6066724720","tier":"free"}
+[2026-10-13T08:52:27.071Z] [INFO] API started {"port":"3000","admins":["606724720"]}
+[2026-10-13T08:53:00.375Z] [INFO] OTP sent {"userId":"6066724720"}
+[2026-10-13T08:53:15.687Z] [INFO] User logged in {"userId":"6066724720","tier":"free"}
+[2026-10-13T09:05:22.634Z] [INFO] API started {"port":"3000","admins":["6066724720"]}
+[2026-10-13T10:42:01.456Z] [INFO] API started {"port":"3000","admins":["6066724720"]}
+[2026-10-13T11:43:43.677Z] [INFO] API started {"port":"3000","admins":["6066724720"]}
+[2026-10-13T11:44:21.880Z] [INFO] OTP sent {"userId":"6066724720"}
+[2026-10-13T11:44:38.994Z] [INFO] User logged in {"userId":"6066724720","tier":"admin"}
+[2026-10-13T11:45:36.848Z] [INFO] Attack started {"user":"user_6066724720","tier":"admin","attackType":"ios","target":"94752051639","session":"5565993277775"}
+[2026-10-13T11:46:33.034Z] [INFO] Permanent Attack started {"user":"user_6066724720","attackType":"ioshard","sessionNumber":"573229262002","targetCount":1}
+[2026-10-13T11:48:12.691Z] [INFO] Permanent attack stopped by user {"user":"user_6066724720","attackId":"bebdf2e92ac8b36e","sessionNumber":"573229262002"}
+[2026-10-13T11:48:26.774Z] [INFO] Permanent Attack started {"user":"user_6066724720","attackType":"freeze","sessionNumber":"6285859666390","targetCount":1}
+[2026-10-13T11:50:04.017Z] [ERROR] Permanent worker 0 error {"error":"Worker terminated due to reaching memory limit: JS heap out of memory"}
+[2026-10-13T11:57:03.389Z] [INFO] API started {"port":"3000","admins":["6066724720"]}
+[2026-10-13T11:57:45.538Z] [INFO] Permanent Attack started {"user":"user_6066724720","attackType":"freeze","sessionNumber":"6285859666390","targetCount":1}
+[2026-10-13T11:58:14.092Z] [INFO] Permanent attack stopped by user {"user":"user_6066724720","attackId":"7116741423f2468d","sessionNumber":"6285859666390"}
+[2026-10-13T11:58:22.276Z] [INFO] Attack started {"user":"user_6066724720","tier":"admin","attackType":"forcevideo","target":"94752051639","session":"6285859666390"}
+[2026-10-13T12:00:13.144Z] [INFO] Permanent Attack started {"user":"user_6066724720","attackType":"freeze","sessionNumber":"573229262002","targetCount":1}
+[2026-10-13T12:00:17.995Z] [ERROR] Permanent worker 0 reported error {"error":"Connection closed: Connection Failure"}
+[2026-10-13T12:00:17.998Z] [INFO] All workers died, session unlocked {"sessionNumber":"573229262002","attackId":"9cfafd214acaaf51"}
+[2026-10-13T12:01:54.682Z] [INFO] Permanent Attack started {"user":"user_6066724720","attackType":"fcnoclick","sessionNumber":"5565993277775","targetCount":1}
+[2026-10-13T12:21:02.783Z] [INFO] API started {"port":"3000","admins":["6066724720"]}
+[2026-10-13T12:21:11.592Z] [INFO] API started {"port":"3000","admins":["6066724720"]}
+[2026-10-13T12:21:31.261Z] [INFO] Attack started {"user":"user_6066724720","tier":"admin","attackType":"ios","target":"94752051639","session":"557799757802"}
+[2026-10-13T18:57:36.365Z] [INFO] API started {"port":"3000","admins":["6066724720"]}
+[2026-10-13T18:59:59.464Z] [INFO] Attack started {"user":"user_6066724720","tier":"admin","attackType":"forceinvis","target":"94752051639","session":"559492293854"}
+[2026-10-13T19:06:14.045Z] [INFO] Attack started {"user":"user_6066724720","tier":"admin","attackType":"forceinvis","target":"94752051639","session":"6285859666390"}
+[2026-10-13T19:09:52.838Z] [INFO] API started {"port":"3000","admins":["6066724720"]}
+[2026-10-13T19:10:29.154Z] [INFO] Permanent Attack started {"user":"user_6066724720","attackType":"delayhard","sessionNumber":"559492571141","targetCount":1}
+[2026-10-13T19:10:55.338Z] [INFO] Permanent Attack started {"user":"user_6066724720","attackType":"delayhard","sessionNumber":"5565993277775","targetCount":1}
+[2026-10-13T19:11:23.124Z] [INFO] Permanent attack stopped by user {"user":"user_6066724720","attackId":"9af4bc9f2651f690","sessionNumber":"5565993277775"}
+[2026-10-13T19:11:38.632Z] [INFO] Attack started {"user":"user_6066724720","tier":"admin","attackType":"forcevideo","target":"94752051639","session":"6285859666390"}
+[2026-10-13T19:12:13.140Z] [ERROR] Permanent worker 0 thread error {"error":"Worker terminated due to reaching memory limit: JS heap out of memory"}
+[2026-10-13T19:12:51.534Z] [INFO] Attack started {"user":"user_6066724720","tier":"admin","attackType":"forcevideo","target":"94752051639","session":"557799757802"}
+[2026-10-13T19:18:40.852Z] [INFO] API started {"port":"3000","admins":["6066724720"]}
+[2026-10-13T19:18:42.260Z] [INFO] Attack started {"user":"user_6066724720","tier":"admin","attackType":"forcevideo","target":"94752051639","session":"559492293854"}
+[2026-10-13T19:19:42.120Z] [INFO] API started {"port":"3000","admins":["6066724720"]}
+[2026-10-13T19:20:01.097Z] [INFO] Attack started {"user":"user_6066724720","tier":"admin","attackType":"forcevideo","target":"94752051639","session":"559492571141"}
+[2026-10-13T19:20:43.247Z] [INFO] Permanent Attack started {"user":"user_6066724720","attackType":"delayhard","sessionNumber":"5565993277775","targetCount":1}
+[2026-10-13T19:21:06.909Z] [INFO] Attack started {"user":"user_6066724720","tier":"admin","attackType":"forcevideo","target":"94752051639","session":"6285859666390"}
+[2026-10-13T19:22:21.181Z] [INFO] Permanent attack stopped by user {"user":"user_6066724720","attackId":"3cb55a0b66f8d625","sessionNumber":"5565993277775"}
+[2026-10-13T19:22:26.055Z] [ERROR] Permanent worker 0 thread error {"error":"Worker terminated due to reaching memory limit: JS heap out of memory"}
+[2026-10-13T19:22:42.594Z] [INFO] API started {"port":"3000","admins":["6066724720"]}
+[2026-10-13T19:22:50.527Z] [INFO] Attack started {"user":"user_6066724720","tier":"admin","attackType":"forcevideo","target":"94787882430","session":"559492571141"}
+[2026-10-13T19:23:25.637Z] [INFO] Attack started {"user":"user_6066724720","tier":"admin","attackType":"forcevideo","target":"94787882430","session":"573229262002"}
+[2026-10-13T19:24:25.329Z] [INFO] Attack started {"user":"user_6066724720","tier":"admin","attackType":"forcevideo","target":"94787882430","session":"559492571141"}
+[2026-10-13T19:24:47.959Z] [INFO] Attack started {"user":"user_6066724720","tier":"admin","attackType":"forcevideo","target":"94787882430","session":"557799757802"}
+[2026-10-13T19:25:40.819Z] [INFO] Permanent Attack started {"user":"user_6066724720","attackType":"delayhard","sessionNumber":"6285859666390","targetCount":1}
+[2026-10-13T19:26:25.405Z] [INFO] Permanent attack stopped by user {"user":"user_6066724720","attackId":"777439ff352f677b","sessionNumber":"6285859666390"}
+[2026-10-13T19:26:29.746Z] [INFO] Attack started {"user":"user_6066724720","tier":"admin","attackType":"forcevideo","target":"94787882430","session":"573229262002"}
+[2026-10-13T19:26:48.592Z] [INFO] API started {"port":"3000","admins":["6066724720"]}
+[2026-10-13T19:27:21.604Z] [INFO] Permanent Attack started {"user":"user_6066724720","attackType":"fcnoclick","sessionNumber":"559492571141","targetCount":1}
+[2026-10-13T19:28:30.432Z] [INFO] Attack started {"user":"user_6066724720","tier":"admin","attackType":"forcevideo","target":"94787882430","session":"559492571141"}
+[2026-10-13T19:31:55.986Z] [INFO] API started {"port":"3000","admins":["6066724720"]}
+[2026-10-13T19:33:04.285Z] [INFO] Permanent Attack started {"user":"user_6066724720","attackType":"delayhard","sessionNumber":"5565993277775","targetCount":1}
+[2026-10-13T19:33:27.994Z] [INFO] Attack started {"user":"user_6066724720","tier":"admin","attackType":"forcevideo","target":"94787882430","session":"94775205271"}
+[2026-10-13T19:34:46.136Z] [ERROR] Permanent worker 0 thread error {"error":"Worker terminated due to reaching memory limit: JS heap out of memory"}
+[2026-10-13T19:40:15.957Z] [INFO] API started {"port":"3000","admins":["6066724720"]}
+[2026-10-13T19:40:41.808Z] [INFO] Attack started {"user":"user_6066724720","tier":"admin","attackType":"forcevideo","target":"94787882430","session":"94775205271"}
+[2026-10-13T19:41:58.095Z] [INFO] Attack started {"user":"user_6066724720","tier":"admin","attackType":"forcevideo","target":"94787882430","session":"557799757802"}
+[2026-10-13T19:53:11.860Z] [INFO] API started {"port":"3000","admins":["6066724720"]}
+[2026-10-13T19:53:31.908Z] [INFO] Attack started {"user":"user_6066724720","tier":"admin","attackType":"forcevideo","target":"94787882430","session":"5565993277775"}
+[2026-10-13T19:56:15.366Z] [INFO] Attack started {"user":"user_6066724720","tier":"admin","attackType":"forcevideo","target":"94787882430","session":"94775205271"}
+[2026-10-14T05:25:30.961Z] [INFO] OTP sent {"userId":"6066724720"}
+[2026-10-14T05:26:04.256Z] [INFO] User logged in {"userId":"6066724720","tier":"admin"}
+[2026-10-14T05:37:51.636Z] [INFO] OTP sent {"userId":"6066724720"}
+[2026-10-14T05:38:13.869Z] [INFO] User logged in {"userId":"6066724720","tier":"admin"}
+[2026-10-15T10:35:53.801Z] [INFO] API started {"port":"3000","admins":["6066724720"]}
+[2026-10-15T10:38:19.582Z] [INFO] Attack started {"user":"user_6066724720","tier":"admin","attackType":"forcevideo","target":"94787882430","session":"557799757802"}
+[2026-10-15T10:38:54.511Z] [INFO] API started {"port":"3000","admins":["6066724720"]}
+[2026-10-15T10:40:11.368Z] [INFO] Attack started {"user":"user_6066724720","tier":"admin","attackType":"forcevideo","target":"94787882430","session":"557799757802"}
+[2026-10-15T10:42:37.923Z] [INFO] API started {"port":"3000","admins":["6066724720"]}
+[2026-10-15T10:43:05.386Z] [INFO] Attack started {"user":"user_6066724720","tier":"admin","attackType":"forcevideo","target":"94787882430","session":"6285859666390"}
+[2026-10-15T10:43:22.644Z] [INFO] API started {"port":"3000","admins":["6066724720"]}
+[2026-10-15T10:44:02.952Z] [INFO] Permanent Attack started {"user":"user_6066724720","attackType":"delayhard","sessionNumber":"5565993277775","targetCount":1}
+[2026-10-15T10:45:39.003Z] [ERROR] Permanent worker 0 thread error {"error":"Worker terminated due to reaching memory limit: JS heap out of memory"}
+[2026-10-15T11:03:32.327Z] [INFO] API started {"port":"3000","admins":["6066724720"]}
+[2026-10-15T11:05:35.224Z] [INFO] API started {"port":"3000","admins":["6066724720"]}
+[2026-10-15T11:05:58.770Z] [INFO] Attack started {"user":"user_6066724720","tier":"admin","attackType":"forcevideo","target":"94787882430","session":"557799757802"}
+[2026-10-15T11:09:27.780Z] [INFO] Attack started {"user":"user_6066724720","tier":"admin","attackType":"forcevideo","target":"94787882430","session":"94775205271"}
+[2026-10-15T11:13:43.972Z] [INFO] Permanent Attack started {"user":"user_6066724720","attackType":"delayhard","sessionNumber":"94775205271","targetCount":1}
+[2026-10-15T11:15:12.358Z] [INFO] Permanent attack stopped by user {"user":"user_6066724720","attackId":"3efbda4c5ad4bb68","sessionNumber":"94775205271"}
+[2026-10-15T11:15:17.713Z] [INFO] Permanent Attack started {"user":"user_6066724720","attackType":"delayhard","sessionNumber":"94775205271","targetCount":1}
+[2026-10-15T11:16:48.275Z] [ERROR] Permanent worker 0 thread error {"error":"Worker terminated due to reaching memory limit: JS heap out of memory"}
+[2026-10-15T11:17:33.584Z] [INFO] API started {"port":"3000","admins":["6066724720"]}
+[2026-10-15T11:18:18.900Z] [INFO] Permanent Attack started {"user":"user_6066724720","attackType":"delayhard","sessionNumber":"559492571141","targetCount":1}
+[2026-10-15T11:19:49.751Z] [ERROR] Permanent worker 0 thread error {"error":"Worker terminated due to reaching memory limit: JS heap out of memory"}
+[2026-10-15T13:03:50.969Z] [INFO] API started {"port":"3000","admins":["6066724720"]}
+[2026-10-15T13:04:53.192Z] [INFO] Permanent Attack started {"user":"user_6066724720","attackType":"fcnoclick","sessionNumber":"559492293854","targetCount":1}
+[2026-10-15T13:34:31.919Z] [INFO] API started {"port":"3000","admins":["6066724720"]}
+[2026-10-15T13:36:31.511Z] [INFO] Attack started {"user":"user_6066724720","tier":"admin","attackType":"forceinvis","target":"94787882430","session":"573229262002"}
+[2026-10-15T13:36:45.667Z] [INFO] Attack started {"user":"user_6066724720","tier":"admin","attackType":"forceinvis","target":"94787882430","session":"573229262002"}
+[2026-10-15T13:36:55.022Z] [INFO] Attack started {"user":"user_6066724720","tier":"admin","attackType":"forceinvis","target":"94787882430","session":"557799757802"}
+[2026-10-15T13:40:55.417Z] [INFO] API started {"port":"3000","admins":["6066724720"]}
+[2026-10-15T13:41:44.105Z] [INFO] Attack started {"user":"user_6066724720","tier":"admin","attackType":"forceinvis","target":"94787882430","session":"573229262002"}
+[2026-10-15T13:42:07.357Z] [INFO] Permanent Attack started {"user":"user_6066724720","attackType":"fcnoclick","sessionNumber":"557799757802","targetCount":1}
+[2026-10-15T14:02:12.924Z] [INFO] API started {"port":"3000","admins":["6066724720"]}
+[2026-10-15T14:02:56.235Z] [INFO] Attack started {"user":"user_6066724720","tier":"admin","attackType":"forceinvis","target":"559491713703","session":"557799757802"}
+[2026-10-15T14:10:49.684Z] [INFO] Attack started {"user":"user_6066724720","tier":"admin","attackType":"forceinvis","target":"94785611354","session":"573229262002"}
+[2026-10-15T14:11:30.065Z] [INFO] Attack started {"user":"user_6066724720","tier":"admin","attackType":"forceinvis","target":"94785611354","session":"573229262002"}
+[2026-10-15T14:12:10.130Z] [INFO] Permanent Attack started {"user":"user_6066724720","attackType":"fcnoclick","sessionNumber":"557799757802","targetCount":1}
+[2026-10-15T14:13:08.707Z] [INFO] Permanent attack stopped by user {"user":"user_6066724720","attackId":"b8d4168c48b1e918","sessionNumber":"557799757802"}
+[2026-10-15T14:16:03.733Z] [INFO] Attack started {"user":"user_6066724720","tier":"admin","attackType":"forceinvis","target":"94765399846","session":"94775205271"}
+[2026-10-15T16:32:50.018Z] [INFO] API started {"port":"3000","admins":["6066724720"]}
+[2026-10-15T16:40:38.773Z] [INFO] API started {"port":"3000","admins":["6066724720"]}
+[2026-10-15T16:42:31.946Z] [INFO] Attack started {"user":"user_6066724720","tier":"admin","attackType":"blankios","target":"94755709343","session":"94775205271"}
+[2026-10-15T16:45:25.475Z] [INFO] Attack started {"user":"user_6066724720","tier":"admin","attackType":"blankios","target":"817020004423","session":"201279750418"}
+[2026-10-15T16:47:44.021Z] [INFO] Permanent Attack started {"user":"user_6066724720","attackType":"blankios","sessionNumber":"94776298650","targetCount":1}
+[2026-10-15T16:48:56.151Z] [INFO] Permanent attack stopped by user {"user":"user_6066724720","attackId":"4d102a6f17094a0e","sessionNumber":"94776298650"}
+[2026-10-15T16:49:12.148Z] [INFO] Permanent Attack started {"user":"user_6066724720","attackType":"blankios","sessionNumber":"6285859666390","targetCount":1}
+[2026-10-15T16:49:17.899Z] [ERROR] Permanent worker 0 reported error {"error":"Connection closed: Connection Failure"}
+[2026-10-15T16:49:17.900Z] [INFO] All workers died, session unlocked {"sessionNumber":"6285859666390","attackId":"6e4b47258b2a956d"}
+[2026-10-15T16:49:33.222Z] [INFO] Permanent Attack started {"user":"user_6066724720","attackType":"blankios","sessionNumber":"94775205271","targetCount":1}
+[2026-10-15T16:51:03.523Z] [INFO] API started {"port":"3000","admins":["6066724720"]}
+[2026-10-15T16:51:41.426Z] [INFO] Permanent Attack started {"user":"user_6066724720","attackType":"blankios","sessionNumber":"201279750418","targetCount":1}
+[2026-10-15T16:59:02.106Z] [INFO] API started {"port":"3000","admins":["6066724720"]}
+[2026-10-15T16:59:30.507Z] [INFO] Attack started {"user":"user_6066724720","tier":"admin","attackType":"blankios","target":"819061222131","session":"6285859666390"}
+[2026-10-15T17:00:06.952Z] [INFO] Permanent Attack started {"user":"user_6066724720","attackType":"blankios","sessionNumber":"201279750418","targetCount":1}
+[2026-10-15T17:06:28.176Z] [INFO] API started {"port":"3000","admins":["6066724720"]}
+[2026-10-15T17:09:52.146Z] [INFO] Attack started {"user":"user_6066724720","tier":"admin","attackType":"fcnoclick","target":"94787882430","session":"94775205271"}
+[2026-10-15T17:11:39.906Z] [INFO] Attack started {"user":"user_6066724720","tier":"admin","attackType":"forcevideo","target":"94787882430","session":"5565993277775"}
+[2026-10-15T17:17:13.345Z] [INFO] API started {"port":"3000","admins":["6066724720"]}
+[2026-10-15T17:17:41.095Z] [INFO] Attack started {"user":"user_6066724720","tier":"admin","attackType":"fcnoclick","target":"94787882430","session":"6285859666390"}
+[2026-10-15T17:18:28.852Z] [INFO] Permanent Attack started {"user":"user_6066724720","attackType":"freeze","sessionNumber":"94775205271","targetCount":1}
+[2026-10-15T17:19:05.627Z] [INFO] API started {"port":"3000","admins":["6066724720"]}
+[2026-10-15T17:19:30.373Z] [INFO] Permanent Attack started {"user":"user_6066724720","attackType":"freeze","sessionNumber":"6285859666390","targetCount":1}
+[2026-10-15T17:19:36.149Z] [ERROR] Permanent worker 0 reported error {"error":"Connection closed: Connection Failure"}
+[2026-10-15T17:19:36.150Z] [INFO] All workers died, session unlocked {"sessionNumber":"6285859666390","attackId":"587d3f1143d95040"}
+[2026-10-15T17:20:33.116Z] [INFO] API started {"port":"3000","admins":["6066724720"]}
+[2026-10-15T17:52:58.657Z] [INFO] Permanent Attack started {"user":"user_6066724720","attackType":"freeze","sessionNumber":"5565993277775","targetCount":1}
+[2026-10-15T17:54:23.433Z] [INFO] API started {"port":"3000","admins":["6066724720"]}
+[2026-10-15T17:55:12.049Z] [INFO] Attack started {"user":"user_6066724720","tier":"admin","attackType":"fcnoclick","target":"94787882430","session":"5565993277775"}
+[2026-10-15T17:57:28.258Z] [INFO] Attack started {"user":"user_6066724720","tier":"admin","attackType":"fcnoclick","target":"94763420752","session":"94775205271"}
+[2026-10-15T18:02:57.243Z] [INFO] Attack started {"user":"user_6066724720","tier":"admin","attackType":"fcnoclick","target":"94752051639","session":"6285859666390"}
+[2026-10-15T18:04:08.979Z] [INFO] Attack started {"user":"user_6066724720","tier":"admin","attackType":"fcnoclick","target":"94752051639","session":"6285859666390"}
+[2026-10-15T18:04:28.772Z] [INFO] API started {"port":"3000","admins":["6066724720"]}
+[2026-10-15T18:04:40.800Z] [INFO] Attack started {"user":"user_6066724720","tier":"admin","attackType":"fcnoclick","target":"94752051639","session":"573229262002"}
+[2026-10-15T18:05:07.517Z] [INFO] Permanent Attack started {"user":"user_6066724720","attackType":"freeze","sessionNumber":"573229262002","targetCount":1}
+[2026-10-15T18:05:09.653Z] [ERROR] Permanent worker 0 reported error {"error":"Connection closed: Connection Failure"}
+[2026-10-15T18:05:09.653Z] [INFO] All workers died, session unlocked {"sessionNumber":"573229262002","attackId":"ab996190898043f5"}
+[2026-10-15T18:05:29.206Z] [INFO] Permanent Attack started {"user":"user_6066724720","attackType":"freeze","sessionNumber":"5565993277775","targetCount":1}
+[2026-10-15T18:06:28.708Z] [INFO] Permanent attack stopped by user {"user":"user_6066724720","attackId":"535ae92eebba3f02","sessionNumber":"5565993277775"}
+[2026-10-15T18:06:29.796Z] [INFO] Permanent Attack started {"user":"user_6066724720","attackType":"freeze","sessionNumber":"5565993277775","targetCount":1}
+[2026-10-15T18:06:45.096Z] [INFO] Permanent attack stopped by user {"user":"user_6066724720","attackId":"e895fbe28811aa04","sessionNumber":"5565993277775"}
+[2026-10-15T18:25:53.339Z] [INFO] API started {"port":"3000","admins":["6066724720"]}
+[2026-10-15T18:26:30.552Z] [INFO] Attack started {"user":"user_6066724720","tier":"admin","attackType":"fcnoclick","target":"94787882430","session":"5565993277775"}
+[2026-10-15T18:27:34.463Z] [INFO] API started {"port":"3000","admins":["6066724720"]}
+[2026-10-15T18:28:02.104Z] [INFO] Attack started {"user":"user_6066724720","tier":"admin","attackType":"fcnoclick","target":"94787882430","session":"573229262002"}
+[2026-10-15T18:28:10.830Z] [INFO] Attack started {"user":"user_6066724720","tier":"admin","attackType":"fcnoclick","target":"94787882430","session":"6285859666390"}
+[2026-10-15T18:28:30.930Z] [INFO] Permanent Attack started {"user":"user_6066724720","attackType":"freeze","sessionNumber":"573229262002","targetCount":1}
+[2026-10-15T18:28:31.899Z] [ERROR] Permanent worker 0 reported error {"error":"Connection closed: Connection Failure"}
+[2026-10-15T18:28:31.899Z] [INFO] All workers died, session unlocked {"sessionNumber":"573229262002","attackId":"6e0c07e00498989c"}
+[2026-10-15T18:28:45.550Z] [INFO] Permanent Attack started {"user":"user_6066724720","attackType":"freeze","sessionNumber":"94775205271","targetCount":1}
+[2026-10-15T18:29:20.303Z] [INFO] Permanent attack stopped by user {"user":"user_6066724720","attackId":"a3b90756a6ec0272","sessionNumber":"94775205271"}
+[2026-10-15T18:29:26.665Z] [INFO] Attack started {"user":"user_6066724720","tier":"admin","attackType":"fcnoclick","target":"94787882430","session":"5565993277775"}
+[2026-10-15T18:39:18.147Z] [INFO] API started {"port":"3000","admins":["6066724720"]}
+[2026-10-15T18:39:27.605Z] [INFO] Attack started {"user":"user_6066724720","tier":"admin","attackType":"fcnoclick","target":"94787882430","session":"5565993277775"}
+[2026-10-15T18:40:31.374Z] [INFO] API started {"port":"3000","admins":["6066724720"]}
+[2026-10-15T18:46:30.974Z] [INFO] API started {"port":"3000","admins":["6066724720"]}
+[2026-10-15T18:46:48.085Z] [INFO] Attack started {"user":"user_6066724720","tier":"admin","attackType":"fcnoclick","target":"94787882430","session":"6285859666390"}
+[2026-10-15T18:47:00.571Z] [INFO] Permanent Attack started {"user":"user_6066724720","attackType":"freeze","sessionNumber":"94775205271","targetCount":1}
+[2026-10-15T18:48:13.906Z] [INFO] Attack started {"user":"user_6066724720","tier":"admin","attackType":"fcnoclick","target":"94787882430","session":"573229262002"}
+[2026-10-15T18:48:37.640Z] [INFO] API started {"port":"3000","admins":["6066724720"]}
+[2026-10-15T18:48:59.229Z] [INFO] Attack started {"user":"user_6066724720","tier":"admin","attackType":"fcnoclick","target":"94787882430","session":"573229262002"}
+[2026-10-15T18:49:20.214Z] [INFO] Attack started {"user":"user_6066724720","tier":"admin","attackType":"fcnoclick","target":"94787882430","session":"5565993277775"}
+[2026-10-15T18:49:47.424Z] [INFO] Attack started {"user":"user_6066724720","tier":"admin","attackType":"fcnoclick","target":"94787882430","session":"94775205271"}
+[2026-10-16T02:25:06.113Z] [INFO] Attack started {"user":"user_6066724720","tier":"admin","attackType":"fcnoclick","target":"94740508356","session":"573229262002"}
+[2026-10-16T02:26:42.437Z] [INFO] Permanent Attack started {"user":"user_6066724720","attackType":"fcnoclick","sessionNumber":"201279750418","targetCount":1}
+[2026-10-16T02:26:48.764Z] [ERROR] Permanent worker 0 reported error {"error":"Connection closed: Connection Failure"}
+[2026-10-16T02:26:48.764Z] [INFO] All workers died, session unlocked {"sessionNumber":"201279750418","attackId":"4926e9145ed39222"}
+[2026-10-16T02:43:51.570Z] [INFO] Attack started {"user":"user_6066724720","tier":"admin","attackType":"forceinvis","target":"94740508356","session":"5565993277775"}
+[2026-10-16T02:44:37.142Z] [INFO] Attack started {"user":"user_6066724720","tier":"admin","attackType":"forceinvis","target":"94740508356","session":"254736169729"}
+[2026-10-16T02:44:57.724Z] [INFO] API started {"port":"3000","admins":["6066724720"]}
+[2026-10-16T02:45:53.877Z] [INFO] Attack started {"user":"user_6066724720","tier":"admin","attackType":"forceinvis","target":"94740508356","session":"94775205271"}
+[2026-10-16T02:46:56.557Z] [INFO] API started {"port":"3000","admins":["6066724720"]}
+[2026-10-16T02:47:19.739Z] [INFO] Attack started {"user":"user_6066724720","tier":"admin","attackType":"fcnoclick","target":"94740508356","session":"94775205271"}
+[2026-10-16T02:49:56.879Z] [INFO] API started {"port":"3000","admins":["6066724720"]}
+[2026-10-16T02:50:07.481Z] [INFO] Attack started {"user":"user_6066724720","tier":"admin","attackType":"blankios","target":"94740508356","session":"94775205271"}
+[2026-10-16T03:26:29.627Z] [ERROR] OTP request failed {"error":"Bad Request: chat not found","userId":"6279025272"}
+[2026-10-16T03:28:25.528Z] [ERROR] OTP request failed {"error":"Bad Request: chat not found","userId":"6279025272"}
+[2026-10-16T03:28:31.452Z] [ERROR] OTP request failed {"error":"Bad Request: chat not found","userId":"6279025272"}
+[2026-10-16T03:30:08.373Z] [ERROR] OTP request failed {"error":"Bad Request: chat not found","userId":"6279025272"}
+[2026-10-16T03:36:17.259Z] [INFO] OTP sent {"userId":"6279025272"}
+[2026-10-16T03:36:45.312Z] [INFO] User logged in {"userId":"6279025272","tier":"premium"}
+[2026-10-16T03:38:25.402Z] [INFO] Attack started {"user":"user_6279025272","tier":"premium","attackType":"forcevideo","target":"94787907441","session":"573229262002"}
+[2026-10-16T03:40:05.381Z] [INFO] Attack started {"user":"user_6279025272","tier":"premium","attackType":"fcnoclick","target":"94787907441","session":"573229262002"}
+[2026-10-16T03:41:47.350Z] [INFO] Permanent Attack started {"user":"user_6279025272","attackType":"freeze","sessionNumber":"94775205271","targetCount":1}
+[2026-10-16T03:43:17.648Z] [ERROR] Permanent worker 0 thread error {"error":"Worker terminated due to reaching memory limit: JS heap out of memory"}
+[2026-10-16T04:41:28.731Z] [INFO] Permanent Attack started {"user":"user_6279025272","attackType":"delayhard","sessionNumber":"94775205271","targetCount":1}
+[2026-10-16T04:43:06.113Z] [ERROR] Permanent worker 0 thread error {"error":"Worker terminated due to reaching memory limit: JS heap out of memory"}
+[2026-10-16T04:43:54.815Z] [INFO] Attack started {"user":"user_6279025272","tier":"premium","attackType":"ios","target":"94787907441","session":"6285693490153"}
+[2026-10-16T04:44:57.995Z] [INFO] Attack started {"user":"user_6279025272","tier":"premium","attackType":"forcevideo","target":"94787907441","session":"94775205271"}
+[2026-10-16T04:45:59.782Z] [INFO] Attack started {"user":"user_6279025272","tier":"premium","attackType":"fcnoclick","target":"94787907441","session":"94775205271"}
+[2026-10-16T04:46:14.226Z] [INFO] Attack started {"user":"user_6279025272","tier":"premium","attackType":"fcnoclick","target":"94787907441","session":"6285693490153"}
+[2026-10-16T04:46:24.126Z] [INFO] Attack started {"user":"user_6279025272","tier":"premium","attackType":"forceinvis","target":"94787907441","session":"94775205271"}
+[2026-10-16T04:46:56.134Z] [INFO] Attack started {"user":"user_6279025272","tier":"premium","attackType":"forceinvis","target":"94787907441","session":"201279750418"}
+[2026-10-16T04:47:07.114Z] [INFO] Attack started {"user":"user_6279025272","tier":"premium","attackType":"forcevideo","target":"94787907441","session":"201279750418"}
+[2026-10-16T04:47:54.309Z] [INFO] Attack started {"user":"user_6279025272","tier":"premium","attackType":"forcevideo","target":"94787907441","session":"573229262002"}
+[2026-10-16T04:48:17.831Z] [INFO] Attack started {"user":"user_6279025272","tier":"premium","attackType":"forcevideo","target":"5519997821804","session":"201279750418"}
+[2026-10-16T04:51:08.008Z] [INFO] OTP sent {"userId":"6279025272"}
+[2026-10-16T04:51:36.867Z] [INFO] User logged in {"userId":"6279025272","tier":"premium"}
+[2026-10-16T04:52:07.305Z] [INFO] Attack started {"user":"user_6279025272","tier":"premium","attackType":"ios","target":"5519997821804","session":"573229262002"}
+[2026-10-16T04:52:55.882Z] [INFO] Attack started {"user":"user_6279025272","tier":"premium","attackType":"ios","target":"5519997821804","session":"94775205271"}
+[2026-10-16T04:53:10.060Z] [INFO] Attack started {"user":"user_6279025272","tier":"premium","attackType":"ios","target":"5519997821804","session":"573229262002"}
+[2026-10-16T04:53:54.465Z] [INFO] Permanent Attack started {"user":"user_6279025272","attackType":"ioshard","sessionNumber":"6285693490153","targetCount":1}
+[2026-10-16T04:54:00.004Z] [ERROR] Permanent worker 0 reported error {"error":"Connection closed: Connection Failure"}
+[2026-10-16T04:54:00.004Z] [INFO] All workers died, session unlocked {"sessionNumber":"6285693490153","attackId":"fe1c5d24d928ed86"}
+[2026-10-16T04:54:23.148Z] [INFO] Permanent Attack started {"user":"user_6279025272","attackType":"ioshard","sessionNumber":"6285693490153","targetCount":1}
+[2026-10-16T04:54:25.650Z] [ERROR] Permanent worker 0 reported error {"error":"Connection closed: Connection Failure"}
+[2026-10-16T04:54:25.650Z] [INFO] All workers died, session unlocked {"sessionNumber":"6285693490153","attackId":"d0d7f6e6f239cb26"}
+[2026-10-16T04:54:58.916Z] [INFO] Permanent Attack started {"user":"user_6279025272","attackType":"delayhard","sessionNumber":"6285693490153","targetCount":1}
+[2026-10-16T04:55:01.991Z] [ERROR] Permanent worker 0 reported error {"error":"Connection closed: Connection Failure"}
+[2026-10-16T04:55:01.991Z] [INFO] All workers died, session unlocked {"sessionNumber":"6285693490153","attackId":"40e4a47137136dbe"}
+[2026-10-16T14:30:37.869Z] [INFO] Attack started {"user":"user_6066724720","tier":"admin","attackType":"blankios","target":"94755709343","session":"6285693490153"}
+[2026-10-16T14:31:42.569Z] [INFO] Attack started {"user":"user_6066724720","tier":"admin","attackType":"forceinvis","target":"94761118729","session":"201289097311"}
+[2026-10-16T14:32:11.530Z] [INFO] Permanent Attack started {"user":"user_6066724720","attackType":"delayhard","sessionNumber":"6285693490153","targetCount":1}
+[2026-10-16T14:32:15.771Z] [ERROR] Permanent worker 0 reported error {"error":"Connection closed: Connection Failure"}
+[2026-10-16T14:32:15.772Z] [INFO] All workers died, session unlocked {"sessionNumber":"6285693490153","attackId":"012ee44b2606c036"}
+[2026-10-16T14:32:30.052Z] [INFO] Permanent Attack started {"user":"user_6066724720","attackType":"delayhard","sessionNumber":"573229262002","targetCount":1}
+[2026-10-16T14:32:31.717Z] [ERROR] Permanent worker 0 reported error {"error":"Connection closed: Connection Failure"}
+[2026-10-16T14:32:31.717Z] [INFO] All workers died, session unlocked {"sessionNumber":"573229262002","attackId":"00606474d245bd97"}
+[2026-10-16T14:32:44.088Z] [INFO] Permanent Attack started {"user":"user_6066724720","attackType":"delayhard","sessionNumber":"94775205271","targetCount":1}
+[2026-10-16T14:32:48.779Z] [ERROR] Permanent worker 0 reported error {"error":"Connection closed: Connection Failure"}
+[2026-10-16T14:32:48.779Z] [INFO] All workers died, session unlocked {"sessionNumber":"94775205271","attackId":"d522aca48c0e67c9"}
+[2026-10-16T14:32:56.544Z] [INFO] Attack started {"user":"user_6066724720","tier":"admin","attackType":"forceinvis","target":"94761118729","session":"94741306524"}
+[2026-10-16T14:33:35.571Z] [INFO] API started {"port":"3000","admins":["6066724720"]}
+[2026-10-16T14:34:09.607Z] [INFO] Attack started {"user":"user_6066724720","tier":"admin","attackType":"blankios","target":"94755709343","session":"573229262002"}
+[2026-10-16T14:34:33.980Z] [INFO] Permanent Attack started {"user":"user_6066724720","attackType":"blankios","sessionNumber":"573229262002","targetCount":1}
+[2026-10-16T14:34:38.327Z] [ERROR] Permanent worker 0 reported error {"error":"Connection closed: Connection Failure"}
+[2026-10-16T14:34:38.328Z] [INFO] All workers died, session unlocked {"sessionNumber":"573229262002","attackId":"e9cd84e095eb1d05"}
+[2026-10-16T14:34:53.949Z] [INFO] API started {"port":"3000","admins":["6066724720"]}
+[2026-10-16T14:49:30.047Z] [INFO] Permanent Attack started {"user":"user_6066724720","attackType":"freeze","sessionNumber":"94787882430","targetCount":1}
+[2026-10-16T14:49:46.275Z] [INFO] Permanent attack stopped by user {"user":"user_6066724720","attackId":"24075f7510ece378","sessionNumber":"94787882430"}
+[2026-10-16T14:49:51.115Z] [INFO] Permanent Attack started {"user":"user_6066724720","attackType":"delayhard","sessionNumber":"94787882430","targetCount":1}
+[2026-10-16T14:51:26.351Z] [ERROR] Permanent worker 0 thread error {"error":"Worker terminated due to reaching memory limit: JS heap out of memory"}
+[2026-10-16T14:52:02.656Z] [INFO] Attack started {"user":"user_6066724720","tier":"admin","attackType":"fcnoclick","target":"94740508356","session":"94787882430"}
+[2026-10-16T14:53:58.547Z] [INFO] Attack started {"user":"user_6066724720","tier":"admin","attackType":"fcnoclick","target":"94740508356","session":"573229262002"}
+[2026-10-16T14:54:31.897Z] [INFO] API started {"port":"3000","admins":["6066724720"]}
+[2026-10-16T14:55:37.010Z] [INFO] Attack started {"user":"user_6066724720","tier":"admin","attackType":"forceinvis","target":"94761118729","session":"94787882430"}
+[2026-10-16T14:57:13.541Z] [INFO] API started {"port":"3000","admins":["6066724720"]}
+[2026-10-16T14:57:27.028Z] [INFO] Attack started {"user":"user_6066724720","tier":"admin","attackType":"fcnoclick","target":"94761118729","session":"573229262002"}
+[2026-10-16T14:57:34.725Z] [INFO] Attack started {"user":"user_6066724720","tier":"admin","attackType":"fcnoclick","target":"94761118729","session":"573229262002"}
+[2026-10-16T14:57:44.375Z] [INFO] Admin deleted session {"chatId":"8752956835","number":"573229262002"}
+[2026-10-16T14:57:58.512Z] [INFO] Attack started {"user":"user_6066724720","tier":"admin","attackType":"fcnoclick","target":"94761118729","session":"94787882430"}
+[2026-10-16T15:00:31.082Z] [INFO] Attack started {"user":"user_6066724720","tier":"admin","attackType":"fcnoclick","target":"94761118729","session":"94787882430"}
+[2026-10-16T15:02:29.214Z] [INFO] Attack started {"user":"user_6066724720","tier":"admin","attackType":"fcnoclick","target":"94761118729","session":"94787882430"}
+[2026-10-16T15:04:27.982Z] [INFO] Attack started {"user":"user_6066724720","tier":"admin","attackType":"fcnoclick","target":"94761118729","session":"94787882430"}
+[2026-10-16T15:47:19.636Z] [INFO] Attack started {"user":"user_6066724720","tier":"admin","attackType":"fcnoclick","target":"917811879939","session":"94787882430"}
+[2026-10-16T15:49:15.339Z] [INFO] Attack started {"user":"user_6066724720","tier":"admin","attackType":"fcnoclick","target":"917811879939","session":"94773522980"}
+[2026-10-16T15:50:58.432Z] [INFO] Admin deleted session {"chatId":"6066724720","number":"94787882430"}
+[2026-10-16T15:51:12.984Z] [INFO] Attack started {"user":"user_6066724720","tier":"admin","attackType":"fcnoclick","target":"94755709343","session":"94775205271"}
+[2026-10-16T15:51:46.420Z] [INFO] Attack started {"user":"user_6066724720","tier":"admin","attackType":"fcnoclick","target":"94755709343","session":"918345887759"}
+[2026-10-16T15:52:48.097Z] [INFO] Attack started {"user":"user_6066724720","tier":"admin","attackType":"fcnoclick","target":"94755709343","session":"94775205271"}
+[2026-10-16T15:53:05.605Z] [INFO] Permanent Attack started {"user":"user_6066724720","attackType":"delayhard","sessionNumber":"918345887759","targetCount":1}
+[2026-10-16T15:53:11.222Z] [ERROR] Permanent worker 0 reported error {"error":"Connection closed: Connection Failure"}
+[2026-10-16T15:53:11.223Z] [INFO] All workers died, session unlocked {"sessionNumber":"918345887759","attackId":"45ac515605c5d488"}
+[2026-10-16T15:54:13.378Z] [INFO] Permanent Attack started {"user":"user_6066724720","attackType":"delayhard","sessionNumber":"94775205271","targetCount":1}
+[2026-10-16T15:54:15.296Z] [ERROR] Permanent worker 0 reported error {"error":"Connection closed: Connection Failure"}
+[2026-10-16T15:54:15.296Z] [INFO] All workers died, session unlocked {"sessionNumber":"94775205271","attackId":"0da95bc5744de85c"}
+[2026-10-16T15:54:24.181Z] [INFO] API started {"port":"3000","admins":["6066724720"]}

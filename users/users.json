@@ -1,0 +1,38 @@
+{
+  "users": [
+    {
+      "id": "6066724720",
+      "username": "user_6066724720",
+      "email": "admin@travacrasher.com",
+      "passwordHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "token": "58008788bf86ce1e940ebcdfd64e010c50fed8a0879827a6a4e9e5c9f601c0bd",
+      "tier": "admin",
+      "expiresAt": null,
+      "createdAt": 1789484875938,
+      "lastLogin": 1791956293869,
+      "totalAttacks": 23
+    },
+    {
+      "id": "8957588737",
+      "username": "user_8957588737",
+      "tier": "free",
+      "token": "fc105d16d7d41ebce178bdbbf6a5f6a191ba75baceb3f38458c3c5ba61f439e9",
+      "createdAt": 1791663971772,
+      "lastLogin": 1791666009885,
+      "totalAttacks": 0
+    },
+    {
+      "id": "6279025272",
+      "username": "user_6279025272",
+      "tier": "premium",
+      "token": "f42ba3232723547296ad614dd661e9091d2b4dec1d455e627ccac4b85848bd82",
+      "createdAt": 1792121805311,
+      "lastLogin": 1792126296867,
+      "totalAttacks": 1
+    }
+  ],
+  "stats": {
+    "totalAttacks": 0,
+    "totalPairs": 0
+  }
+}

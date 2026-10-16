@@ -1,0 +1,43 @@
+{
+  "state": 0,
+  "tokens": [],
+  "premium": [
+    {
+      "id": "8569862417",
+      "expiresAt": 1802149808912
+    },
+    {
+      "id": "7468190650",
+      "expiresAt": null
+    },
+    {
+      "id": "7224193268",
+      "expiresAt": null
+    },
+    {
+      "id": "7763682425",
+      "expiresAt": null
+    },
+    {
+      "id": "8768257557",
+      "expiresAt": null
+    },
+    {
+      "id": "8823327668",
+      "expiresAt": null
+    },
+    {
+      "id": "6279025272",
+      "expiresAt": null
+    },
+    {
+      "id": "7145292321",
+      "expiresAt": null
+    }
+  ],
+  "resellers": [
+    "REPLACE_WITH_NUMERIC_CHAT_ID_OF_ayeshaqeu",
+    "8579049583",
+    "1965677607"
+  ]
+}
